@@ -1,11 +1,18 @@
 <body>
-    <p> Hello queen </p>
+    <p> Hello </p>
     <script>
         //let, var, const
-        let age = 13;
-        let maxAge = 100000000000;
-        let numPerDay = 3;
+        let age = window.prompt("What is your age?");
+        let maxAge = window.prompt("What is your max age?");
+        let numPerDay = window.prompt("How many snacks do you need in a day?");
         let totalRequired = (numPerDay * 365) * (maxAge - age);
-        document.write("You will need " + totalRequired + " servings of milktea to last you until the ripe old age of" + maxAge);
+
+    
+        let answer = window.confirm("Is your input correct?"); 
+        if (answer == "Yes");
+        document.write("You will need " + totalRequired + " servings of your favorite snack to last you until the ripe old age of" + maxAge);
+        if (answer == "No");
+        document.write("Run the program again.");
+        
     </script>
 </body>
