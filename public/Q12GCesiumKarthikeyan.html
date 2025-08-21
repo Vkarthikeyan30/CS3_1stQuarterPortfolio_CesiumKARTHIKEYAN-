@@ -2,28 +2,26 @@
 <html>
 <body>
 
-<h2> Q1 3rd Graded Exercise submitted by Varnashree Karthikeyan of 9Cesium </h2>
-<script>
-    function totalMeal() {
-   var mp = 119.99;
-    var tip = 20;
-    var sc = 12;
+<h2>Q1 3rd Graded Exercise submitted by Varnashree Karthikeyan of 9Cesium</h2>
 
-    document.getElementById("mp").value = mp;
-    document.getElementById("tip").value = tip;
-    document.getElementById("sc").value = sc;
-
-    var total =  mp + tip + (sc / 100 * mp);
-    document.write("Total Meal Cost: $" + total.toFixed(2));
-    
-}
-</script>
-
-<input type = "number" id = "mp" placeholder="Meal Price: ">
-<input type = "number" id = "tip" placeholder = "Tip: ">
-<input type = "number" id = "sc" placeholder = "Service Charge: ">
+<input type="number" id="mp" placeholder="Meal Price:" />
+<input type="number" id="tip" placeholder="Tip:" />
+<input type="number" id="sc" placeholder="Service Charge:" />
 
 <button onclick="totalMeal()">Accept Input</button>
 
+<p id="result"></p>
+
+<script>
+function totalMeal() {
+    var mp = parseFloat(document.getElementById("mp").value) || 0;
+    var tip = parseFloat(document.getElementById("tip").value) || 0;
+    var sc = parseFloat(document.getElementById("sc").value) || 0;
+
+    var total = mp + tip + (sc / 100 * mp);
+    document.getElementById("result").textContent = "Total Meal Cost: $" + total.toFixed(2);
+}
+</script>
+
 </body>
-</html
+</html>
